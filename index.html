@@ -163,7 +163,14 @@ section{padding:64px 20px;max-width:980px;margin:0 auto;}
 .frame svg{width:26px;color:var(--forest);opacity:0.7;}
 .frame span{font-size:0.72rem;color:var(--ink-soft);text-align:center;padding:0 10px;}
 
-b-btn:hover{opacity:1;}
+/* ---------- GAMES (light theme) ---------- */
+.game-nav{display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:4px 2px 14px;justify-content:flex-start;}
+.tab-btn{
+  flex:0 0 auto;border:1.5px solid var(--line);background:var(--white);color:var(--ink);
+  border-radius:var(--radius-pill);padding:9px 16px;font-size:0.8rem;font-weight:700;
+  white-space:nowrap;transition:all 0.2s ease;opacity:0.78;
+}
+.tab-btn:hover{opacity:1;}
 .tab-btn[aria-selected="true"]{background:var(--forest);border-color:var(--forest);color:var(--white);opacity:1;}
 .panel{display:none;animation:fadein 0.35s ease;}
 .panel.active{display:block;}
@@ -291,7 +298,7 @@ footer{text-align:center;padding:26px 20px 90px;color:var(--ink-soft);font-size:
   <div class="nav-inner" id="navInner">
     <a href="#invitation" class="nav-link" data-section="invitation">Invitation</a>
     <a href="#gallery" class="nav-link" data-section="gallery">Gallery</a>
-    
+    <a href="#games" class="nav-link" data-section="games">Games</a>
     <a href="#rsvp" class="nav-link" data-section="rsvp">RSVP</a>
   </div>
 </nav>
@@ -358,7 +365,15 @@ footer{text-align:center;padding:26px 20px 90px;color:var(--ink-soft);font-size:
 </section>
 
 <!-- ================= GAMES ================= -->
-
+<section id="games">
+  <div class="section-head">
+    <svg class="leaf-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4C20 12 8 24 8 38c0 12 10 22 24 22s24-10 24-22C56 24 44 12 32 4Z" fill="currentColor"/></svg>
+    <span class="script">Twenty-One &amp; Thriving</span>
+    <p>Party games to keep the whole garden laughing, talking, and celebrating Ntandoyesizwe Jade Dlamini.</p>
+  </div>
+  <div class="game-nav" id="gameNav" role="tablist" aria-label="Choose a game"></div>
+  <div id="panels"></div>
+</section>
 
 <!-- ================= RSVP ================= -->
 <section id="rsvp">
